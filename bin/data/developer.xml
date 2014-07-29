@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<team>
+	<developer id="1">
+		<name>KAAN BURAK SENER</name>
+		<age>22</age>
+		<location>IZMIR</location>
+	</developer>
+	<developer id="2">
+		<name>ERDI IZGI</name>
+		<age>23</age>
+		<location>RIZE</location>
+	</developer>
+	<developer id="3">
+		<name>SEFIK YUNUS OZCAN</name>
+		<age>23</age>
+		<location>IZMIR</location>
+	</developer>
+</team>
