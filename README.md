@@ -49,20 +49,20 @@ you can get all elements of the xml file by calling `readXML()` method of `dxh` 
 dxh.readXML();
 ```
 
-you can add a new developer element according to DOM structure by calling `addElement(String id, String name, String age, String location)` method of `dxh` object
+you can add a new developer element according to its DOM structure by calling `addElement(String id, String name, String age, String location)` method of `dxh` object
 
 ```java 
 dxh.addElement("4", "GORKEM SAGDAS", "22", "IZMIR");
 dxh.saveXML();
 ```
 
-you can remove an existed developer element according to DOM structure by calling `removeElement(String id)` method of `dxh` object
+you can remove the existed developer element by calling `removeElement(String id)` method of `dxh` object
 
 ```java 
 dxh.removeElement("4");
 dxh.saveXML();
 ```
-If you want to add multiple and remove more than one element, It will be sufficient to call `saveXML` method only once at the end of all add and remove operations
+If you want to perform multiple add and remove operation, It will be sufficient to call `saveXML` method only once at the end of all these operations
 
 ```java 
 dxh.addElement("4", "GORKEM SAGDAS", "22", "IZMIR");
