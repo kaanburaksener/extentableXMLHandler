@@ -13,6 +13,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 
 public abstract class AbstractXMLHandler {
+	
 	protected Document doc;
 	protected String path;
 
@@ -29,8 +30,7 @@ public abstract class AbstractXMLHandler {
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			doc = dBuilder.parse(xml);
 			doc.getDocumentElement().normalize();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 		
@@ -47,8 +47,7 @@ public abstract class AbstractXMLHandler {
 			DOMSource source = new DOMSource(doc);
 			StreamResult result = new StreamResult(new File(path));
 			transformer.transform(source, result);
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 	}

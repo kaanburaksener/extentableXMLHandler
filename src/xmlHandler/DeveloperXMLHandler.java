@@ -18,12 +18,10 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 	* @param path The location of XML file 
 	*/
 	public DeveloperXMLHandler(String path) {
-		
 		doc = super.openXML(path);
 		team = doc.getFirstChild();
 		nodeList = doc.getElementsByTagName("developer");
 	}
-	
 	
 	/**
 	* This is used to add a new developer element to XML file
@@ -33,8 +31,7 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 	* @param location Developer's location 
 	*/
 	@Override
-	public void addElement(String id, String name, String age, String location) {
-		
+	public void addElement(String id, String name, String age, String location) {	
 		try {
 			// create a developer element
 			Element developer = doc.createElement("developer");
@@ -44,22 +41,21 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 			developer.setAttribute("id", id);
 	 
 			// name of developer element
-			Element name_holder = doc.createElement("name");
-			name_holder.appendChild(doc.createTextNode(name));
-			developer.appendChild(name_holder);
+			Element nameHolder = doc.createElement("name");
+			nameHolder.appendChild(doc.createTextNode(name));
+			developer.appendChild(nameHolder);
 	 
 			// age of developer element
-			Element age_holder = doc.createElement("age");
-			age_holder.appendChild(doc.createTextNode(age));
-			developer.appendChild(age_holder);
+			Element ageHolder = doc.createElement("age");
+			ageHolder.appendChild(doc.createTextNode(age));
+			developer.appendChild(ageHolder);
 			
 			// location of developer element
-			Element location_holder = doc.createElement("location");
-			location_holder.appendChild(doc.createTextNode(location));
-			developer.appendChild(location_holder);
+			Element locationHolder = doc.createElement("location");
+			locationHolder.appendChild(doc.createTextNode(location));
+			developer.appendChild(locationHolder);
 			
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -88,12 +84,10 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 					}
 				}
 			}
-		} 
-	    catch (Exception e) {
+		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 	}
-	
 	
 	/**
 	* This is used to get all developer elements from XML file
@@ -121,11 +115,10 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 					elementList.add(element);
 				}
 			}
-	    } 
-		catch (Exception e) {
+	    } catch (Exception e) {
 			e.printStackTrace();
 	    }
-		
+
 		return elementList;
 	}
 	
@@ -134,7 +127,6 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 	*/
 	@Override
 	public void printXML() {
-		
 		try {
 			System.out.println(doc.getDocumentElement().getNodeName().toUpperCase());
 			System.out.println("-----------------------------");
@@ -152,8 +144,7 @@ public class DeveloperXMLHandler extends AbstractXMLHandler {
 					System.out.println();
 				}
 			}
-	    } 
-		catch (Exception e) {
+	    } catch (Exception e) {
 			e.printStackTrace();
 	    }
 	}
